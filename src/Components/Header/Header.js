@@ -104,11 +104,11 @@ export const Header = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="More Pages">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Chris Bradshaw"
-                  src="/static/images/avatar/2.jpg"
+                  src="../../images/PixelChris.jpg"
                 />
               </IconButton>
             </Tooltip>

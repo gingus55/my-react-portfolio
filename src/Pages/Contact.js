@@ -1,5 +1,11 @@
 import React from "react";
+import { Header } from "../Components/Header/Header";
 
 export const Contact = () => {
-  return <div>Contact Page</div>;
+  return (
+    <>
+      <Header />
+      <div>Contact Page</div>
+    </>
+  );
 };
