@@ -1,0 +1,17 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.left-aside {
+  flex-grow: 1;
+  height: 12rem;
+  background-color: red;
+}
+
+.right-side {
+  flex-grow: 3;
+  height: 12rem;
+  background-color: blue;
+}
