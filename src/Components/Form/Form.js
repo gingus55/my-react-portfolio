@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./style.css";
 
 export const Form = () => {
-  // Here we set two state variables for firstName and lastName using `useState`
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [question, setQuestion] = useState("");
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -19,9 +19,12 @@ export const Form = () => {
     e.preventDefault();
 
     // Alert the user their first and last name, clear the inputs
-    alert(`Hello ${firstName} ${lastName}`);
+    alert(
+      `Thank you ${firstName} ${lastName} for asking the following ${question}. I'll get back to you when I can`
+    );
     setFirstName("");
     setLastName("");
+    setQuestion("");
   };
 
   return (
@@ -43,6 +46,13 @@ export const Form = () => {
           onChange={handleInputChange}
           type="text"
           placeholder="Last Name"
+        />
+        <input
+          value={question}
+          name="question"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Question..."
         />
         <button type="button" onClick={handleFormSubmit}>
           Submit
