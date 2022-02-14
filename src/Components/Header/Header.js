@@ -30,7 +30,13 @@ export const Header = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
+  const handleCloseUserMenu = (event) => {
+    if (event.target.textContent === "Contact") {
+      const url = `http://localhost:3000/${event.target.textContent}`;
+      window.location.replace(url);
+      setAnchorElUser(null);
+    } else {
+    }
     setAnchorElUser(null);
   };
 
@@ -44,7 +50,7 @@ export const Header = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            LOGO
+            CHRIS BRADSHAW
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -89,7 +95,7 @@ export const Header = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            LOGO
+            CHRIS BRADSHAW
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -108,7 +114,8 @@ export const Header = () => {
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Chris Bradshaw"
-                  src="../../images/PixelChris.jpg"
+                  src="/src/images/PixelChris.jpg"
+                  //   sx={{ width: 24, height: 24 }}
                 />
               </IconButton>
             </Tooltip>
