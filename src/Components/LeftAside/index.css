@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-grow: inherit;
+  flex-direction: column;
+}
+
+.logos {
+  max-width: fit-content;
+  /* max-height: 5rem; */
+  margin: 2px;
+}

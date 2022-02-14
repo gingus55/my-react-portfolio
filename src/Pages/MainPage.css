@@ -6,12 +6,12 @@
 
 .left-aside {
   flex-grow: 1;
-  height: 12rem;
-  background-color: red;
+  /* height: 12rem; */
+  /* background-color: red; */
 }
 
 .right-side {
-  flex-grow: 3;
-  height: 12rem;
-  background-color: blue;
+  flex-grow: 4;
+  /* height: 12rem; */
+  /* background-color: blue; */
 }
