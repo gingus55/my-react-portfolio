@@ -12,6 +12,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
+import pixelImage from "../../assets/images/PixelChris.jpg";
+
 const pages = ["Home", "Projects", "Contact"];
 const settings = ["Home", "Projects", "Contact", "About"];
 
@@ -144,7 +146,7 @@ export const Header = () => {
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Chris Bradshaw"
-                  src="/src/images/PixelChris.jpg"
+                  src={pixelImage}
                   //   sx={{ width: 24, height: 24 }}
                 />
               </IconButton>
