@@ -1,11 +1,11 @@
 import React from "react";
 import { Header } from "../Components/Header/Header";
 
-export const ProjectPage = () => {
+export const AboutPage = () => {
   return (
     <>
       <Header />
-      <div>Projects Page</div>
+      <div>ABout Page</div>
     </>
   );
 };

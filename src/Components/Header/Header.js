@@ -35,6 +35,18 @@ export const Header = () => {
       const url = `http://localhost:3000/${event.target.textContent}`;
       window.location.replace(url);
       setAnchorElUser(null);
+    } else if (event.target.textContent === "Home") {
+      const url = `http://localhost:3000/`;
+      window.location.replace(url);
+      setAnchorElUser(null);
+    } else if (event.target.textContent === "Projects") {
+      const url = `http://localhost:3000/${event.target.textContent}`;
+      window.location.replace(url);
+      setAnchorElUser(null);
+    } else if (event.target.textContent === "About") {
+      const url = `http://localhost:3000/${event.target.textContent}`;
+      window.location.replace(url);
+      setAnchorElUser(null);
     } else {
     }
     setAnchorElUser(null);
