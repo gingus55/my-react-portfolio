@@ -29,9 +29,6 @@ export const Form = () => {
 
   return (
     <div>
-      <p>
-        Hello {firstName} {lastName}
-      </p>
       <form className="form">
         <input
           value={firstName}
