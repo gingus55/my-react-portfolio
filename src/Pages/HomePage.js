@@ -3,6 +3,7 @@ import React from "react";
 import { Banner } from "../Components/Banner/Banner";
 import { Header } from "../Components/Header/Header";
 import { LeftAside } from "../Components/LeftAside/LeftAside";
+import { RightSide } from "../Components/RightSide/RightSide";
 
 export const HomePage = () => {
   return (
@@ -14,7 +15,7 @@ export const HomePage = () => {
           <LeftAside />
         </Grid>
         <Grid item xs={10}>
-          <div className="right-side"></div>
+          <RightSide />
         </Grid>
       </Grid>
     </>
