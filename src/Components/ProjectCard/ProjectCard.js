@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 
 export const ProjectCard = ({ project, index }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card key={index} sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
@@ -20,13 +20,26 @@ export const ProjectCard = ({ project, index }) => {
           {project.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {project.description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button
+          onClick={() => {
+            window.location.replace(project.deployLink);
+          }}
+          size="small"
+        >
+          Live Link
+        </Button>
+        <Button
+          onClick={() => {
+            window.location.replace(project.gitLink);
+          }}
+          size="small"
+        >
+          Repository
+        </Button>
       </CardActions>
     </Card>
   );
