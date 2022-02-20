@@ -5,7 +5,7 @@ import cssLogo from "../../assets/images/css-img.png";
 import javascriptLogo from "../../assets/images/js-logo.png";
 import jqueryLogo from "../../assets/images/jquery-logo.png";
 import githubLogo from "../../assets/images/git-img.png";
-import mysqlLogo from "../../assets/images/mysql-img.jpeg";
+import mysqlLogo from "../../assets/images/mysql-img.png";
 import nodeLogo from "../../assets/images/node-js-img.png";
 
 import "./index.css";

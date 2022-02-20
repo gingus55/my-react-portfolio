@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 
 export const ProjectCard = ({ project, index }) => {
   return (
-    <Card key={index} sx={{ maxWidth: 345 }}>
+    <Card key={index} sx={{ flexGrow: 1, maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
