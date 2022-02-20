@@ -1,5 +1,4 @@
 import { Button, Grid, Typography } from "@mui/material";
-import { spacing } from "@mui/system";
 
 import pixelChris from "../../assets/images/PixelChris.jpg";
 
