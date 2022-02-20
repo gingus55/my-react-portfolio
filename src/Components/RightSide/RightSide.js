@@ -3,6 +3,8 @@ import fitnessImage from "../../assets/images/fit-screenshot.png";
 import codeQuizImage from "../../assets/images/cq-screenshot.png";
 import weatherImage from "../../assets/images/wd-screenshot.png";
 import empTraImage from "../../assets/images/emptrack-screenshot.png";
+import workSchedImage from "../../assets/images/ws-screenshot.png";
+import { Grid } from "@mui/material";
 
 const projects = [
   {
@@ -36,13 +38,23 @@ const projects = [
       "Terminal run application to track and update employee tables.",
     gitLink: "https://github.com/gingus55/employee-tracker",
   },
+  {
+    title: "Working Schedule",
+    image: workSchedImage,
+    description:
+      "Terminal run application to track and update employee tables.",
+    gitLink: "https://github.com/gingus55/working-schedule",
+    deployLink: "https://gingus55.github.io/working-schedule/",
+  },
 ];
 export const RightSide = () => {
   return (
-    <>
-      {projects.map((project, index) => (
-        <ProjectCard project={project} key={index} />
-      ))}
-    </>
+    <Grid container spacing={0.5}>
+      <Grid item xs={12} md={6}>
+        {projects.map((project, index) => (
+          <ProjectCard project={project} key={index} />
+        ))}
+      </Grid>
+    </Grid>
   );
 };
