@@ -1,13 +1,12 @@
 import React from "react";
 import { Header } from "../Components/Header/Header";
-import { ProjectCard } from "../Components/ProjectCard/ProjectCard";
+import { RightSide } from "../Components/RightSide/RightSide";
 
 export const ProjectPage = () => {
   return (
     <>
       <Header />
-      <div>Projects Page</div>
-      <ProjectCard />
+      <RightSide />
     </>
   );
 };
