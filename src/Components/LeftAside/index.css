@@ -2,6 +2,8 @@
   display: flex;
   flex-grow: inherit;
   flex-direction: column;
+  border-right: solid black;
+  padding-right: 5px;
 }
 
 .logos {

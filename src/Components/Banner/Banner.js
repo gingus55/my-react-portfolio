@@ -7,7 +7,13 @@ import "./index.css";
 export const Banner = () => {
   return (
     <Grid sx={{ paddingLeft: "24px", marginTop: "10px" }} container spacing={2}>
-      <Grid item xs={6} sx={{ padding: "20px" }}>
+      <Grid
+        item
+        container
+        justifyContent="center"
+        xs={6}
+        sx={{ padding: "20px" }}
+      >
         <img className="pixel" src={pixelChris} alt="pixel of Chris Bradshaw" />
       </Grid>
 
