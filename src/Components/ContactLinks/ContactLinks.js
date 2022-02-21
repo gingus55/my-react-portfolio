@@ -13,9 +13,25 @@ export const ContactLinks = () => {
       justifyContent="space-around"
       alignItems="center"
     >
-      <img className="icon" src={linkedInIcon} alt="linkedInLogo" />
+      <img
+        onClick={() => {
+          window.location.replace(
+            "https://linkedin.com/in/chris-bradshaw-39549421a"
+          );
+        }}
+        className="icon"
+        src={linkedInIcon}
+        alt="linkedInLogo"
+      />
 
-      <img className="icon" src={gitHubIcon} alt="linkedInLogo" />
+      <img
+        onClick={() => {
+          window.location.replace("https://github.com/gingus55");
+        }}
+        className="icon"
+        src={gitHubIcon}
+        alt="linkedInLogo"
+      />
 
       <img className="icon" src={cvIcon} alt="linkedInLogo" />
     </Grid>
