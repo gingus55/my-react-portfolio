@@ -10,17 +10,19 @@ export const Banner = () => {
       <Grid item xs={6} sx={{ padding: "20px" }}>
         <img className="pixel" src={pixelChris} alt="pixel of Chris Bradshaw" />
       </Grid>
+
       <Grid
+        item
         container
-        direction="column"
-        justifyContent="space-around"
-        alignItems="center"
         xs={6}
-        justify="center"
+        sx={{ paddingRight: "24px" }}
+        justifyContent="center"
+        direction="column"
+        textAlign="center"
       >
-        <Typography textAlign="center">
+        <Typography>
           Maths teacher of 13 years looking to learn something new. Always had
-          an interest in coding since writing bootdisks for games on my 486!
+          an interest in coding since writing boot-disks for games on my 486!
         </Typography>
         <Button
           variant="outlined"
