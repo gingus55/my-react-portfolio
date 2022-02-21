@@ -17,6 +17,7 @@ export const Banner = () => {
         </Typography>
         <Button
           sx={{ ml: 10, mr: 10, mt: 1 }}
+          textAlign="center"
           variant="outlined"
           onClick={() => {
             window.location.replace("http://localhost:3000/Contact");

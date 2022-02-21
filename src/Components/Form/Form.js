@@ -15,10 +15,8 @@ export const Form = () => {
   };
 
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // Alert the user their first and last name, clear the inputs
     alert(
       `Thank you ${firstName} ${lastName} for asking the following ${question}. I'll get back to you when I can`
     );
