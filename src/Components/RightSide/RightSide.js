@@ -7,6 +7,8 @@ import workSchedImage from "../../assets/images/ws-screenshot.png";
 import { Grid } from "@mui/material";
 import sasImage from "../../assets/images/sas-screenshot.png";
 
+import "./index.css";
+
 const projects = [
   {
     title: "Fitness App",
@@ -60,9 +62,9 @@ const mainProject = {
 
 export const RightSide = () => {
   return (
-    <Grid container spacing={0.5}>
-      <ProjectCard project={mainProject} key={999} />
-      <Grid item xs={12} md={6}>
+    <Grid container direction="column" spacing={2}>
+      <ProjectCard project={mainProject} className="main-card" key={999} />
+      <Grid container direction="row" spacing={2} item xs={12} md={6}>
         {projects.map((project, index) => (
           <ProjectCard project={project} key={index} />
         ))}

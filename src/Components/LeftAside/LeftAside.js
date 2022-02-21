@@ -10,7 +10,6 @@ import nodeLogo from "../../assets/images/node-js-img.png";
 
 import "./index.css";
 import { Typography } from "@mui/material";
-import { borderRight } from "@mui/system";
 
 export const LeftAside = () => {
   return (
