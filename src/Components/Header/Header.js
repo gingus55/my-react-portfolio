@@ -31,15 +31,15 @@ export const Header = () => {
   const handleCloseNavMenu = (event) => {
     if (event.target.textContent === "Contact") {
       const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.replace(url);
+      window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "Home") {
       const url = `http://localhost:3000/`;
-      window.location.replace(url);
+      window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "Projects") {
       const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.replace(url);
+      window.location.href = url;
       setAnchorElUser(null);
     } else {
     }
@@ -49,19 +49,19 @@ export const Header = () => {
   const handleCloseUserMenu = (event) => {
     if (event.target.textContent === "Contact") {
       const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.replace(url);
+      window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "Home") {
       const url = `http://localhost:3000/`;
-      window.location.replace(url);
+      window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "Projects") {
       const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.replace(url);
+      window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "About") {
       const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.replace(url);
+      window.location.href = url;
       setAnchorElUser(null);
     } else {
     }

@@ -33,7 +33,7 @@ export const Banner = () => {
         <Button
           variant="outlined"
           onClick={() => {
-            window.location.replace("http://localhost:3000/Contact");
+            window.location.href = "http://localhost:3000/Contact";
           }}
           size="medium"
         >

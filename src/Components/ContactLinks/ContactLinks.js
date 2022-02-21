@@ -15,9 +15,8 @@ export const ContactLinks = () => {
     >
       <img
         onClick={() => {
-          window.location.replace(
-            "https://linkedin.com/in/chris-bradshaw-39549421a"
-          );
+          window.location.href =
+            "https://linkedin.com/in/chris-bradshaw-39549421a";
         }}
         className="icon"
         src={linkedInIcon}
@@ -26,7 +25,7 @@ export const ContactLinks = () => {
 
       <img
         onClick={() => {
-          window.location.replace("https://github.com/gingus55");
+          window.location.href = "https://github.com/gingus55";
         }}
         className="icon"
         src={gitHubIcon}
