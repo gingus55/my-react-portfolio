@@ -7,16 +7,11 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
 
-export const ProjectCard = ({ project, index }) => {
+export const ProjectCard = ({ project, index, width }) => {
   return (
     <Grid item>
-      <Card key={index} sx={{ flexGrow: 1 }}>
-        <CardMedia
-          component="img"
-          height="200px"
-          image={project.image}
-          alt=""
-        />
+      <Card key={index} sx={{ flexGrow: 1, maxWidth: width }}>
+        <CardMedia component="img" height="200" image={project.image} alt="" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {project.title}
