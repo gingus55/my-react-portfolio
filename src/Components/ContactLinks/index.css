@@ -1,4 +1,6 @@
 .icon {
   max-width: 25%;
   /* flex-grow: 1; */
+  height: 25%;
+  align-items: center;
 }

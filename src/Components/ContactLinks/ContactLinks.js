@@ -11,7 +11,7 @@ export const ContactLinks = () => {
       container
       direction="row"
       justifyContent="space-around"
-      alignContent="center"
+      alignItems="center"
     >
       <img className="icon" src={linkedInIcon} alt="linkedInLogo" />
 
