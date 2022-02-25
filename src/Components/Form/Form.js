@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Tooltip } from "@mui/material";
+import { TextField, Tooltip } from "@mui/material";
 
 import "./style.css";
 
@@ -7,6 +7,7 @@ export const Form = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [question, setQuestion] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -14,9 +15,11 @@ export const Form = () => {
 
     if (name === "firstName") {
       return setFirstName(value);
-    } else if (name === "lastName") {
+    }
+    if (name === "lastName") {
       return setLastName(value);
-    } else {
+    }
+    if (name === "question") {
       return setQuestion(value);
     }
 
@@ -41,31 +44,39 @@ export const Form = () => {
     <div>
       <form className="form">
         <Tooltip disableFocusListener title="REQUIRED">
-          <input
-            value={firstName}
+          <TextField
+            helperText="Please enter your first name"
+            id="firstName-text-aligned"
+            label="First Name"
             name="firstName"
-            onChange={handleInputChange}
+            value={firstName}
             type="text"
-            placeholder="First Name"
+            onChange={handleInputChange}
           />
         </Tooltip>
         <Tooltip disableFocusListener title="REQUIRED">
-          <input
-            value={lastName}
+          <TextField
+            helperText="Please enter your last name"
+            id="lastName-text-aligned"
+            label="Last Name"
             name="lastName"
-            onChange={handleInputChange}
+            value={lastName}
             type="text"
-            placeholder="Last Name"
+            onChange={handleInputChange}
           />
         </Tooltip>
 
         <Tooltip disableFocusListener title="REQUIRED">
-          <input
-            value={question}
+          <TextField
+            id="outlined-multiline-static"
+            label="Question"
             name="question"
+            value={question}
             onChange={handleInputChange}
-            type="text"
-            placeholder="Question..."
+            multiline
+            fullWidth
+            rows={4}
+            defaultValue=" "
           />
         </Tooltip>
 
