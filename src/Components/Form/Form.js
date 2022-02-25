@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Tooltip } from "@mui/material";
+
 import "./style.css";
 
 export const Form = () => {
@@ -38,27 +40,35 @@ export const Form = () => {
   return (
     <div>
       <form className="form">
-        <input
-          value={firstName}
-          name="firstName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          value={lastName}
-          name="lastName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Last Name"
-        />
-        <input
-          value={question}
-          name="question"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Question..."
-        />
+        <Tooltip disableFocusListener title="REQUIRED">
+          <input
+            value={firstName}
+            name="firstName"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="First Name"
+          />
+        </Tooltip>
+        <Tooltip disableFocusListener title="REQUIRED">
+          <input
+            value={lastName}
+            name="lastName"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Last Name"
+          />
+        </Tooltip>
+
+        <Tooltip disableFocusListener title="REQUIRED">
+          <input
+            value={question}
+            name="question"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Question..."
+          />
+        </Tooltip>
+
         <button type="button" onClick={handleFormSubmit}>
           Submit
         </button>
