@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Tooltip } from "@mui/material";
+import { Button, TextField, Tooltip } from "@mui/material";
 
 import "./style.css";
 
@@ -22,19 +22,22 @@ export const Form = () => {
     if (name === "question") {
       return setQuestion(value);
     }
-
+    if (name === "email") {
+      return setEmail(value);
+    }
     // return name === "firstName" ? setFirstName(value) : setLastName(value);
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (firstName && lastName && question) {
+    if (firstName && lastName && question && email) {
       alert(
-        `Thank you ${firstName} ${lastName} for asking the following ${question}. I'll get back to you when I can`
+        `Thank you ${firstName} ${lastName} for asking the following ${question}. I'll get back to you at ${email} when I can`
       );
       setFirstName("");
       setLastName("");
       setQuestion("");
+      setEmail("");
     } else {
       alert("Please submit all fields.");
     }
@@ -45,7 +48,7 @@ export const Form = () => {
       <form className="form">
         <Tooltip disableFocusListener title="REQUIRED">
           <TextField
-            sx={{ m: 3 }}
+            sx={{ mt: 3 }}
             helperText="Please enter your first name"
             id="firstName-text-aligned"
             label="First Name"
@@ -57,7 +60,7 @@ export const Form = () => {
         </Tooltip>
         <Tooltip disableFocusListener title="REQUIRED">
           <TextField
-            sx={{ m: 3 }}
+            sx={{ mt: 3, ml: 3 }}
             helperText="Please enter your last name"
             id="lastName-text-aligned"
             label="Last Name"
@@ -70,6 +73,7 @@ export const Form = () => {
 
         <Tooltip disableFocusListener title="REQUIRED">
           <TextField
+            sx={{ mt: 3 }}
             id="outlined-multiline-static"
             label="Question"
             name="question"
@@ -81,10 +85,27 @@ export const Form = () => {
             defaultValue=" "
           />
         </Tooltip>
-
-        <button type="button" onClick={handleFormSubmit}>
+        <Tooltip disableFocusListener title="REQUIRED">
+          <TextField
+            sx={{ mt: 3 }}
+            fullWidth
+            helperText="Please enter your email"
+            id="email-text-aligned"
+            label="Email"
+            name="email"
+            value={email}
+            type="text"
+            onChange={handleInputChange}
+          />
+        </Tooltip>
+        <Button
+          sx={{ mt: 3 }}
+          fullWidth
+          onClick={handleFormSubmit}
+          variant="contained"
+        >
           Submit
-        </button>
+        </Button>
       </form>
     </div>
   );
