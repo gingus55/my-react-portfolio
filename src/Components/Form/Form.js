@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import validator from "validator";
 import { Button, TextField, Tooltip } from "@mui/material";
 
 import "./style.css";
@@ -8,9 +9,17 @@ export const Form = () => {
   const [lastName, setLastName] = useState("");
   const [question, setQuestion] = useState("");
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = (email) => {
+    if (validator.isEmail(email)) {
+      setEmailError("Valid Email");
+    } else {
+      setEmailError("Enter valid Email!");
+    }
+  };
 
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
 
     if (name === "firstName") {
@@ -23,9 +32,9 @@ export const Form = () => {
       return setQuestion(value);
     }
     if (name === "email") {
+      validateEmail(value);
       return setEmail(value);
     }
-    // return name === "firstName" ? setFirstName(value) : setLastName(value);
   };
 
   const handleFormSubmit = (e) => {
@@ -89,7 +98,7 @@ export const Form = () => {
           <TextField
             sx={{ mt: 3 }}
             fullWidth
-            helperText="Please enter your email"
+            helperText=""
             id="email-text-aligned"
             label="Email"
             name="email"
@@ -98,6 +107,14 @@ export const Form = () => {
             onChange={handleInputChange}
           />
         </Tooltip>
+        <span
+          style={{
+            fontWeight: "bold",
+            color: "red",
+          }}
+        >
+          {emailError}
+        </span>
         <Button
           sx={{ mt: 3 }}
           fullWidth
