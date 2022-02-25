@@ -23,13 +23,16 @@ export const Form = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
-    alert(
-      `Thank you ${firstName} ${lastName} for asking the following ${question}. I'll get back to you when I can`
-    );
-    setFirstName("");
-    setLastName("");
-    setQuestion("");
+    if (firstName && lastName && question) {
+      alert(
+        `Thank you ${firstName} ${lastName} for asking the following ${question}. I'll get back to you when I can`
+      );
+      setFirstName("");
+      setLastName("");
+      setQuestion("");
+    } else {
+      alert("Please submit all fields.");
+    }
   };
 
   return (

@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import { Banner } from "../Components/Banner/Banner";
+import { Footer } from "../Components/Footer/Footer";
 import { Header } from "../Components/Header/Header";
 import { LeftAside } from "../Components/LeftAside/LeftAside";
 import { RightSide } from "../Components/RightSide/RightSide";
@@ -18,6 +19,7 @@ export const HomePage = () => {
           <RightSide />
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };
