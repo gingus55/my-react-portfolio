@@ -45,6 +45,7 @@ export const Form = () => {
       <form className="form">
         <Tooltip disableFocusListener title="REQUIRED">
           <TextField
+            sx={{ m: 3 }}
             helperText="Please enter your first name"
             id="firstName-text-aligned"
             label="First Name"
@@ -56,6 +57,7 @@ export const Form = () => {
         </Tooltip>
         <Tooltip disableFocusListener title="REQUIRED">
           <TextField
+            sx={{ m: 3 }}
             helperText="Please enter your last name"
             id="lastName-text-aligned"
             label="Last Name"
