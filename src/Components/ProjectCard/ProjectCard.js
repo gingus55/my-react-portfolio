@@ -9,8 +9,8 @@ import { Grid } from "@mui/material";
 
 export const ProjectCard = ({ project, index, width }) => {
   return (
-    <Grid item>
-      <Card key={index} sx={{ flexGrow: 1, maxWidth: width }}>
+    <Grid item xs={12} sm={6} md={4}>
+      <Card key={index} sx={{ flexGrow: 1 }}>
         <CardMedia component="img" height="200" image={project.image} alt="" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

@@ -60,19 +60,17 @@ const mainProject = {
 
 export const RightSide = () => {
   return (
-    <Grid container direction="column" spacing={2}>
+    <Grid container direction="column" spacing={3}>
       <ProjectCard project={mainProject} className="main-card" key={999} />
       <Grid
         container
         direction="row"
         className="cardContainer"
-        spacing={2}
+        spacing={3}
         item
-        xs={12}
-        md={6}
       >
-        {projects.map((project, index, width) => (
-          <ProjectCard project={project} key={index} width={280} />
+        {projects.map((project, index) => (
+          <ProjectCard project={project} key={index} />
         ))}
       </Grid>
     </Grid>
