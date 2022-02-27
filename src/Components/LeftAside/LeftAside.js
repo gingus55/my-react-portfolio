@@ -8,7 +8,7 @@ import githubLogo from "../../assets/images/git-img.png";
 import mysqlLogo from "../../assets/images/mysql-img.png";
 import nodeLogo from "../../assets/images/node-js-img.png";
 
-import "./index.css";
+import "./LeftAside.css";
 import { Typography } from "@mui/material";
 
 export const LeftAside = () => {
