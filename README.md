@@ -6,6 +6,10 @@
 
 https://github.com/gingus55/my-react-portfolio
 
+# Link to deployed portfolio
+
+https://gingus55.github.io/my-react-portfolio/
+
 ## Table of contents
 
 1. [Description](#description)
