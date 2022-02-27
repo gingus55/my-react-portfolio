@@ -31,8 +31,15 @@ export const ContactLinks = () => {
         src={gitHubIcon}
         alt="linkedInLogo"
       />
-
-      <img className="icon" src={cvIcon} alt="linkedInLogo" />
+      <img
+        onClick={() => {
+          window.location.href =
+            "https://docs.google.com/document/d/1po8ox7R_Cd5quJUOcJmv4z3tSLDyvikRH176Qa0nQlA/edit?usp=sharing";
+        }}
+        className="icon"
+        src={cvIcon}
+        alt="linkedInLogo"
+      />
     </Grid>
   );
 };
