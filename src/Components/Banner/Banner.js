@@ -35,8 +35,9 @@ export const Banner = () => {
         textAlign="center"
       >
         <Typography>
-          Maths teacher of 13 years looking to learn something new. Always had
-          an interest in coding since writing boot-disks for games on my 486!
+          Maths teacher turned Full Stack Developer with The University of
+          Birmingham. Always had a passion for coding since writing boot-disks
+          for games on my 486!
         </Typography>
         <Button
           variant="outlined"
