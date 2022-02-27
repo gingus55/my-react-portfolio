@@ -6,13 +6,15 @@ import "./index.css";
 
 export const Banner = () => {
   return (
-    <Grid sx={{ paddingLeft: "24px", marginTop: "10px" }} container spacing={2}>
+    <Grid sx={{ paddingLeft: "24px", marginTop: "10px" }} container spacing={3}>
       <Grid
         item
         container
         justifyContent="center"
-        xs={6}
-        sx={{ padding: "20px" }}
+        alignContent="center"
+        xs={12}
+        sm={6}
+        // sx={{ padding: "20px" }}
       >
         <img className="pixel" src={pixelChris} alt="pixel of Chris Bradshaw" />
       </Grid>
@@ -20,9 +22,11 @@ export const Banner = () => {
       <Grid
         item
         container
-        xs={6}
-        sx={{ paddingRight: "24px" }}
+        xs={12}
+        sm={6}
+        sx={{ paddingRight: "24px", paddingBottom: "24px" }}
         justifyContent="center"
+        alignContent="center"
         direction="column"
         textAlign="center"
       >
