@@ -14,7 +14,7 @@ import { Typography } from "@mui/material";
 export const LeftAside = () => {
   return (
     <div className="container">
-      <Typography align="center" variant="h5">
+      <Typography align="center" variant="h6">
         Tool Box
       </Typography>
       <img className="logos" src={htmlLogo} alt="html-logo" />
