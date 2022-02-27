@@ -6,7 +6,11 @@ import "./index.css";
 
 export const Banner = () => {
   return (
-    <Grid sx={{ paddingLeft: "24px", marginTop: "10px" }} container spacing={3}>
+    <Grid
+      sx={{ paddingLeft: "24px", marginTop: "10px", pb: "24px" }}
+      container
+      spacing={3}
+    >
       <Grid
         item
         container
