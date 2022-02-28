@@ -4,7 +4,6 @@ import { ContactPage } from "./Pages/ContactPage";
 import { ProjectPage } from "./Pages/ProjectPage";
 import { AboutPage } from "./Pages/AboutPage";
 
-// import { Header } from "./Components/Header/Header";
 
 function App() {
   return (
