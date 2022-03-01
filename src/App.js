@@ -8,9 +8,10 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<HomePage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/projects" element={<ProjectPage />} />
-      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage exact={true} />} />
+      <Route path="/projects" element={<ProjectPage exact={true} />} />
+      <Route path="/about" element={<AboutPage />} exact={true} />
+      <Route path="/*" element={<HomePage />} />
     </Routes>
   );
 }
