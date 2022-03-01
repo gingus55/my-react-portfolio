@@ -4,14 +4,13 @@ import { ContactPage } from "./Pages/ContactPage";
 import { ProjectPage } from "./Pages/ProjectPage";
 import { AboutPage } from "./Pages/AboutPage";
 
-
 function App() {
   return (
     <Routes>
       <Route exact path="/" element={<HomePage />} />
-      <Route path="/Contact" element={<ContactPage />} />
-      <Route path="/Projects" element={<ProjectPage />} />
-      <Route path="/About" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="projects" element={<ProjectPage />} />
+      <Route path="/about" element={<AboutPage />} />
     </Routes>
   );
 }

@@ -14,8 +14,8 @@ import MenuItem from "@mui/material/MenuItem";
 
 import pixelImage from "../../assets/images/PixelChris.jpg";
 
-const pages = ["Home", "Projects", "Contact"];
-const settings = ["Home", "Projects", "Contact", "About"];
+const pages = ["home", "projects", "contact"];
+// const settings = ["Home", "rojects", "Contact", "About"];
 
 export const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,15 +29,15 @@ export const Header = () => {
   };
 
   const handleCloseNavMenu = (event) => {
-    if (event.target.textContent === "Contact") {
+    if (event.target.textContent === "contact") {
       const url = `http://localhost:3000/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
-    } else if (event.target.textContent === "Home") {
+    } else if (event.target.textContent === "home") {
       const url = `http://localhost:3000/`;
       window.location.href = url;
       setAnchorElUser(null);
-    } else if (event.target.textContent === "Projects") {
+    } else if (event.target.textContent === "projects") {
       const url = `http://localhost:3000/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
@@ -47,19 +47,19 @@ export const Header = () => {
   };
 
   const handleCloseUserMenu = (event) => {
-    if (event.target.textContent === "Contact") {
+    if (event.target.textContent === "contact") {
       const url = `http://localhost:3000/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
-    } else if (event.target.textContent === "Home") {
+    } else if (event.target.textContent === "home") {
       const url = `http://localhost:3000/`;
       window.location.href = url;
       setAnchorElUser(null);
-    } else if (event.target.textContent === "Projects") {
+    } else if (event.target.textContent === "projects") {
       const url = `http://localhost:3000/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
-    } else if (event.target.textContent === "About") {
+    } else if (event.target.textContent === "about") {
       const url = `http://localhost:3000/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
@@ -163,7 +163,7 @@ export const Header = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {pages.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
