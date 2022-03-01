@@ -97,7 +97,7 @@ export const Header = () => {
             </IconButton>
             <Menu
               id="menu-appbar"
-              anchorEl={anchorElNav}
+              anchorEl={anchorElUser}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "left",
