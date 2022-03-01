@@ -13,6 +13,8 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
 import pixelImage from "../../assets/images/PixelChris.jpg";
+import { Link } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 const pages = ["home", "projects", "contact"];
 // const settings = ["Home", "rojects", "Contact", "About"];
@@ -28,45 +30,45 @@ export const Header = () => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = (event) => {
-    if (event.target.textContent === "contact") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.href = url;
-      setAnchorElUser(null);
-    } else if (event.target.textContent === "home") {
-      const url = `http://localhost:3000/`;
-      window.location.href = url;
-      setAnchorElUser(null);
-    } else if (event.target.textContent === "projects") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.href = url;
-      setAnchorElUser(null);
-    } else {
-    }
-    setAnchorElUser(null);
-  };
+  // const handleCloseNavMenu = (event) => {
+  //   if (event.target.textContent === "contact") {
+  //     const url = `http://localhost:3000/${event.target.textContent}`;
+  //     window.location.href = url;
+  //     setAnchorElUser(null);
+  //   } else if (event.target.textContent === "home") {
+  //     const url = `http://localhost:3000/`;
+  //     window.location.href = url;
+  //     setAnchorElUser(null);
+  //   } else if (event.target.textContent === "projects") {
+  //     const url = `http://localhost:3000/${event.target.textContent}`;
+  //     window.location.href = url;
+  //     setAnchorElUser(null);
+  //   } else {
+  //   }
+  //   setAnchorElUser(null);
+  // };
 
-  const handleCloseUserMenu = (event) => {
-    if (event.target.textContent === "contact") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.href = url;
-      setAnchorElUser(null);
-    } else if (event.target.textContent === "home") {
-      const url = `http://localhost:3000/`;
-      window.location.href = url;
-      setAnchorElUser(null);
-    } else if (event.target.textContent === "projects") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.href = url;
-      setAnchorElUser(null);
-    } else if (event.target.textContent === "about") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
-      window.location.href = url;
-      setAnchorElUser(null);
-    } else {
-    }
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = (event) => {
+  //   if (event.target.textContent === "contact") {
+  //     const url = `http://localhost:3000/${event.target.textContent}`;
+  //     window.location.href = url;
+  //     setAnchorElUser(null);
+  //   } else if (event.target.textContent === "home") {
+  //     const url = `http://localhost:3000/`;
+  //     window.location.href = url;
+  //     setAnchorElUser(null);
+  //   } else if (event.target.textContent === "projects") {
+  //     const url = `http://localhost:3000/${event.target.textContent}`;
+  //     window.location.href = url;
+  //     setAnchorElUser(null);
+  //   } else if (event.target.textContent === "about") {
+  //     const url = `http://localhost:3000/${event.target.textContent}`;
+  //     window.location.href = url;
+  //     setAnchorElUser(null);
+  //   } else {
+  //   }
+  //   setAnchorElUser(null);
+  // };
 
   return (
     <AppBar position="static">
@@ -105,13 +107,12 @@ export const Header = () => {
                 horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -127,13 +128,22 @@ export const Header = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
+              <Link
+                to={page == "home" ? "/" : `/${page}`}
+                variant="h6"
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                component={RouterLink}
+                underline="none"
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  "padding-right": "10px",
+                  "text-transform": "capitalize",
+                }}
               >
                 {page}
-              </Button>
+              </Link>
             ))}
           </Box>
 
@@ -147,7 +157,7 @@ export const Header = () => {
                 />
               </IconButton>
             </Tooltip>
-            <Menu
+            {/* <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -161,14 +171,13 @@ export const Header = () => {
                 horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
             >
               {pages.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
         </Toolbar>
       </Container>
