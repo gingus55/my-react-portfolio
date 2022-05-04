@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-grow: inherit;
+  flex-direction: column;
+  border-right: solid black;
+  padding-right: 5px;
+  justify-items: center;
+}
+
+.logos {
+  max-width: inherit;
+  margin: 2px;
+  margin-top: 10px;
+}
