@@ -50,9 +50,11 @@ export const Header = () => {
 
   const handleCloseUserMenu = (event) => {
     if (event.target.textContent === "contact") {
-      const url = `https://gingus55.github.io/my-react-portfolio/${event.target.textContent}`;
-      window.location.href = url;
-      setAnchorElUser(null);
+      // const url = `https://gingus55.github.io/my-react-portfolio/${event.target.textContent}`;
+      // window.location.href = url;
+      // setAnchorElUser(null);
+
+      <Link to="/contact"></Link>;
     } else if (event.target.textContent === "home") {
       const url = `https://gingus55.github.io/my-react-portfolio/`;
       window.location.href = url;
