@@ -6,7 +6,7 @@ import { createBrowserHistory } from "history";
 
 const customHistory = createBrowserHistory();
 ReactDOM.render(
-  <BrowserRouter history={customHistory}>
+  <BrowserRouter basename={process.env.PUBLIC_URL} history={customHistory}>
     <App />
   </BrowserRouter>,
   document.getElementById("root")
