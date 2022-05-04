@@ -50,19 +50,19 @@ export const Header = () => {
 
   const handleCloseUserMenu = (event) => {
     if (event.target.textContent === "contact") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
+      const url = `https://gingus55.github.io/my-react-portfolio/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "home") {
-      const url = `http://localhost:3000/`;
+      const url = `https://gingus55.github.io/my-react-portfolio/`;
       window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "projects") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
+      const url = `https://gingus55.github.io/my-react-portfolio/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
     } else if (event.target.textContent === "about") {
-      const url = `http://localhost:3000/${event.target.textContent}`;
+      const url = `https://gingus55.github.io/my-react-portfolio/${event.target.textContent}`;
       window.location.href = url;
       setAnchorElUser(null);
     } else {
