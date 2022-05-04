@@ -51,7 +51,7 @@ export const Header = () => {
   const handleCloseUserMenu = (event) => {
     if (event.target.textContent === "contact") {
       const url = `http://gingus55.github.io/my-react-portfolio/${event.target.textContent}`;
-      lhref = url;
+      window.location.href = url;
       setAnchorElUser(null);
 
       // <Link component={RouterLink} to="/contact"></Link>;
