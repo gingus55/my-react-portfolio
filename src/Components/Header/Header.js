@@ -8,7 +8,6 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
@@ -20,16 +19,16 @@ const pages = ["home", "projects", "contact"];
 // const settings = ["Home", "rojects", "Contact", "About"];
 
 export const Header = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  // const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   // const handleCloseNavMenu = (event) => {
   //   if (event.target.textContent === "contact") {
@@ -49,30 +48,30 @@ export const Header = () => {
   //   setAnchorElUser(null);
   // };
 
-  // const handleCloseUserMenu = (event) => {
-  //   if (event.target.textContent === "contact") {
-  //     const url = `http://localhost:3000/${event.target.textContent}`;
-  //     window.location.href = url;
-  //     setAnchorElUser(null);
-  //   } else if (event.target.textContent === "home") {
-  //     const url = `http://localhost:3000/`;
-  //     window.location.href = url;
-  //     setAnchorElUser(null);
-  //   } else if (event.target.textContent === "projects") {
-  //     const url = `http://localhost:3000/${event.target.textContent}`;
-  //     window.location.href = url;
-  //     setAnchorElUser(null);
-  //   } else if (event.target.textContent === "about") {
-  //     const url = `http://localhost:3000/${event.target.textContent}`;
-  //     window.location.href = url;
-  //     setAnchorElUser(null);
-  //   } else {
-  //   }
-  //   setAnchorElUser(null);
-  // };
+  const handleCloseUserMenu = (event) => {
+    if (event.target.textContent === "contact") {
+      const url = `http://localhost:3000/${event.target.textContent}`;
+      window.location.href = url;
+      setAnchorElUser(null);
+    } else if (event.target.textContent === "home") {
+      const url = `http://localhost:3000/`;
+      window.location.href = url;
+      setAnchorElUser(null);
+    } else if (event.target.textContent === "projects") {
+      const url = `http://localhost:3000/${event.target.textContent}`;
+      window.location.href = url;
+      setAnchorElUser(null);
+    } else if (event.target.textContent === "about") {
+      const url = `http://localhost:3000/${event.target.textContent}`;
+      window.location.href = url;
+      setAnchorElUser(null);
+    } else {
+    }
+    setAnchorElUser(null);
+  };
 
   return (
-    <AppBar position="static">
+    <AppBar sx={{ backgroundColor: "#E08604" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -154,7 +153,7 @@ export const Header = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Link
-                to={page == "home" ? "/" : `/${page}`}
+                to={page === "home" ? "/" : `/${page}`}
                 variant="h6"
                 key={page}
                 component={RouterLink}

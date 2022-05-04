@@ -116,7 +116,7 @@ export const Form = () => {
           {emailError}
         </span>
         <Button
-          sx={{ mt: 3 }}
+          sx={{ mt: 3, backgroundColor: "#E08604" }}
           fullWidth
           onClick={handleFormSubmit}
           variant="contained"
