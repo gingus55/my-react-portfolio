@@ -3,6 +3,8 @@ import linkedInIcon from "../../assets/images/linked-in.png";
 import gitHubIcon from "../../assets/images/github.png";
 import cvIcon from "../../assets/images/cv-icon.png";
 
+import "./Footer.css";
+
 export const Footer = () => {
   return (
     <Grid item xs={12} textAlign="center">
@@ -34,7 +36,7 @@ export const Footer = () => {
         <img className="icon" src={cvIcon} alt="linkedInLogo" />
       </Grid>
       <Grid item xs={12}>
-        <Typography>Contact Email: gingus55@hotmail.com</Typography>
+        <footer className="footy">Contact Email: gingus55@hotmail.com</footer>
       </Grid>
     </Grid>
   );

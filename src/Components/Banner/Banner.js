@@ -42,7 +42,7 @@ export const Banner = () => {
         <Button
           variant="outlined"
           onClick={() => {
-            window.location.href = "http://localhost:3000/Contact";
+            window.location.href = "https://github.com/gingus55/Contact";
           }}
           size="medium"
         >
