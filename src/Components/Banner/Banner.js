@@ -42,7 +42,8 @@ export const Banner = () => {
         <Button
           variant="outlined"
           onClick={() => {
-            window.location.href = "https://github.com/gingus55/Contact";
+            window.location.href =
+              "https://gingus55.github.io/my-react-portfolio/Contact";
           }}
           size="medium"
         >
