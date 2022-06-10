@@ -43,7 +43,7 @@ export const Banner = () => {
           variant="outlined"
           onClick={() => {
             window.location.href =
-              "https://gingus55.github.io/my-react-portfolio/Contact";
+              "http://gingus55.github.io/my-react-portfolio/Contact";
           }}
           size="medium"
         >
