@@ -33,6 +33,7 @@ export const Banner = () => {
         alignContent="center"
         direction="column"
         textAlign="center"
+        paddingLeft={"150px"}
       >
         <Typography>
           Maths teacher turned Full Stack Developer with The University of
